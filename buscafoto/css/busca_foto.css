@@ -1,0 +1,82 @@
+html {
+    height: 100%
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0
+}
+
+#marco_mapa {
+    height: 100vh;
+}
+
+.marco-scoreboard {
+    background-color: white;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 22vw;
+    left: 23px;
+    padding: 5px;
+}
+
+.scoreboard {
+    margin: 0 !important;
+    font-size: 20px;
+}
+
+.foto {
+    width: 30vw;
+    position: absolute;
+    bottom: 23px;
+    left: 23px;
+    border: 5px solid white;
+}
+
+.foto:hover {
+    width: 60vw;
+    z-index: 99;
+    cursor: zoom-in;
+}
+
+.photo-info {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.marco_btn {
+    width: 100%;
+    position: absolute;
+    bottom: 23px;
+    right: 50px;
+    text-align: center;
+}
+
+.btn-confirm {
+    height: 10vh;
+    width: 10vw;
+    font-size: 1.5vw !important;
+    padding: 0.5vw;
+}
+
+.btn-next {
+    height: 10vh;
+    width: 10vw;
+    font-size: 1.5vw !important;
+    padding: 0.5vw;
+}
+
+.levels {
+    position: absolute !important;
+    top: 23px !important;
+    left: 20px;
+}
+
+.dropdown-toggle {
+    background-color: #337AB7;
+}
+
+a:hover {
+    cursor: pointer;
+}
