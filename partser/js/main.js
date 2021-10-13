@@ -27,7 +27,7 @@ imagebanner.onchange = function(event) {
             document.getElementById('imgbanner').src = fr.result;
         }
         fr.readAsDataURL(files[0]);
-        console.log(fr.result)
+        console.log(fr.result) 
     }
 }
 
