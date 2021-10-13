@@ -149,24 +149,26 @@ function writeInHTML(partidos) {
     var back = 0;
     var info_partido = "info_partidoA";
     for (i = 4; i < partidos.length; i += 2) {
-        if (back % 2 == 0) {
-            info_partido = "info_partidoA";
-        } else {
-            info_partido = "info_partidoB";
-        }
-        back++;
-        $('#horariospartidos').append('<div class="categoria ' + info_partido + ' font-color">' +
-            '<div class="titulocategoria">' +
-            '<p class="titulocategoria font-color">' +
-            partidos[i][0] + '</p>' +
-            '</div>' +
-            '<div class="row"><p id="partido" class="p-partido local col-3 font-color">' + partidos[i][1] + '</p>' +
-            '<p id="partido" class="p-partido visitante col-3 font-color">' + partidos[i + 1][0] + '</p>' +
-            '<p id="partido" class="p-partido fecha col-2 font-color">' + partidos[i][2] + '</p>' +
-            '<p id="partido" class="p-partido fecha col-2 font-color">' + partidos[i + 1][1] + '</p>' +
-            '<p id="partido" class="p-partido pabellon col-2 font-color">' + partidos[i][3] + '</p></div>' +
+        if (!partidos[i][0].toString().includes("JUEGOS")) {
+            if (back % 2 == 0) {
+                info_partido = "info_partidoA";
+            } else {
+                info_partido = "info_partidoB";
+            }
+            back++;
+            $('#horariospartidos').append('<div class="categoria ' + info_partido + ' font-color">' +
+                '<div class="titulocategoria">' +
+                '<p class="titulocategoria font-color">' +
+                partidos[i][0] + '</p>' +
+                '</div>' +
+                '<div class="row"><p id="partido" class="p-partido local col-3 font-color">' + partidos[i][1] + '</p>' +
+                '<p id="partido" class="p-partido visitante col-3 font-color">' + partidos[i + 1][0] + '</p>' +
+                '<p id="partido" class="p-partido fecha col-2 font-color">' + partidos[i][2] + '</p>' +
+                '<p id="partido" class="p-partido fecha col-2 font-color">' + partidos[i + 1][1] + '</p>' +
+                '<p id="partido" class="p-partido pabellon col-2 font-color">' + partidos[i][3] + '</p></div>' +
 
-            '</div>');
+                '</div>');
+        }
     }
     cssChange();
 }
